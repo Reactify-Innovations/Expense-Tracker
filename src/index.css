@@ -1,0 +1,273 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+    color: hsla(0, 0%, 100%, 0.8);
+}
+
+body {
+    height: 100vh;
+    width: 100%;
+    background-color:hsla(207, 44%, 30%, 0.7) ;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.container {
+    height: auto;
+    width: 400px;
+    padding: 30px 45px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    border: 1px solid hsla(0, 0%, 0%, 0.6);
+}
+
+.container header h2 {
+    font-size: 1.75rem;
+    margin-bottom: 35px;
+    text-align: center;
+}
+
+.container .currentBalance {
+    margin-bottom: 15px;
+}
+
+.currentBalance p {
+    margin-bottom: 8px;
+}
+
+.currentBalance span {
+    font-size: 1.3rem;
+}
+
+.container .incomeExpense {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+
+    width: 100%;
+    height: 80px;
+
+    margin: 15px 0;
+    border: 1px solid hsla(0, 0%, 0%, 0.6);
+}
+
+.incomeExpense .income {
+    text-align: center;
+}
+
+.incomeExpense .expense {
+    text-align: center;
+}
+
+.incomeExpense .income p {
+    margin-top: 10px;
+}
+
+.incomeExpense .expense p {
+    margin-top: 10px;
+}
+
+.container .transaction {
+    margin: 15px 0;
+
+}
+
+.transaction #purposeField {
+    width: 100%;
+    height: 30px;
+    font-size: 1rem;
+
+    background-color: transparent;
+    border: 1px solid hsla(0, 0%, 0%, 0.6);
+    border-radius: 5px;
+    margin: 15px 0;
+    padding: 0 10px;
+    outline: none;
+}
+
+.transaction #purposeField::placeholder {
+    color: hsla(0, 0%, 100%, 0.3);
+}
+
+.transaction #amountField {
+    width: 100%;
+    height: 30px;
+    font-size: 1rem;
+
+    background-color: transparent;
+    border: 1px solid hsla(0, 0%, 0%, 0.6);
+    border-radius: 5px;
+    margin: 15px 0;
+    padding: 0 10px;
+    outline: none;
+}
+
+.transaction #amountField::placeholder {
+    color: hsla(0, 0%, 100%, 0.3);
+}
+
+
+.transaction .radioInput {
+    margin: 15px 0;
+}
+
+.transaction .radioInput label {
+    margin: 0 15px 0 5px;
+}
+
+.transaction .btn button{
+    width: 100%;
+    height: 35px;
+    font-size: 1rem;
+    background-color: hsla(0, 0%, 0%, 0.3);
+    border: none; outline: none;
+    border-radius: 5px;
+    transition: all 0.2s;
+    cursor: pointer;
+    margin: 5px 0;
+}
+
+.transaction .btn button:hover {
+    background-color: hsla(0, 0%, 0%, 0.2);
+}
+
+.transaction .btn button:active {
+    background-color: hsla(0, 0%, 0%, 0.5);
+}
+
+.container #history {
+    height: auto;
+    width: 100%;
+
+}
+
+#history h3 {
+    margin-bottom: 10px;
+}
+
+#history .list {
+    width: 100%;
+    max-height: 200px;
+    list-style: none;
+    overflow-y: auto; 
+    scrollbar-width: thin; 
+    scrollbar-color: hsla(0, 0%, 0%, 0.45) transparent; 
+
+
+    ::-webkit-scrollbar {
+        width: 8px;
+    }
+
+    ::-webkit-scrollbar-thumb {
+        border-radius: 4px;
+    }
+
+    ::-webkit-scrollbar-track {
+        background: transparent; 
+    }
+}
+
+#history .list li {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+
+    text-transform: capitalize;
+    font-weight: 600;
+    
+    padding: 10px 10px;
+    margin: 5px 0;
+    border-radius: 5px;
+
+    background-color: hsla(0, 0%, 0%, 0.3);
+    transition: all 0.2s;
+    cursor: pointer;
+}
+
+#history .list li:hover {
+    background-color: hsla(0, 0%, 0%, 0.2);
+}
+
+
+/* ----------------------    Media Queries      ----------------------*/
+
+@media screen and (max-width: 320px) {
+    
+    .container {
+        height: auto;
+        width: 300px;
+        padding: 30px;
+    
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        border: 1px solid hsla(0, 0%, 0%, 0.6);
+    }
+}
+
+
+@media (min-width:321px) and (max-width: 360px) {
+    
+    .container {
+        height: auto;
+        width: 330px;
+        padding: 30px;
+    
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        border: 1px solid hsla(0, 0%, 0%, 0.6);
+    }
+}
+
+
+@media (min-width:361px) and (max-width: 428px) {
+    
+    .container {
+        height: auto;
+        width: 370px;
+        padding: 30px;
+    
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        border: 1px solid hsla(0, 0%, 0%, 0.6);
+    }
+}
+
+@media (min-width:768px) and (max-width: 1024px) {
+    
+    .container {
+        height: auto;
+        width: 500px;
+        padding: 30px;
+    
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        border: 1px solid hsla(0, 0%, 0%, 0.6);
+    }
+}
+
+@media screen and (min-width:1025px) {
+    
+    .container {
+        height: auto;
+        width: 600px;
+        padding: 30px;
+    
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        border: 1px solid hsla(0, 0%, 0%, 0.6);
+    }
+}
+
